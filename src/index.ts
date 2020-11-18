@@ -43,7 +43,7 @@ const options: OptionsInterface = {
 /**
  * @param {OptionsInterface} opts  new options to override
  */
-export function setup(opts: OptionsInterface) {
+export function setup(opts: OptionsInterface): void {
   Object.assign(options, opts);
 
   if (options.disableFile) {
@@ -122,7 +122,7 @@ const createLoggerOptions = (label: string) => {
  * @param {String} label label for the logger
  * @return {Logger}
  */
-export default function getLogger(label = "") {
+export default function getLogger(label = ""): Logger {
   if (!loggers.has(label)) loggers.add(label, createLoggerOptions(label));
   return loggers.get(label);
 }

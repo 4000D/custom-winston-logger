@@ -1,6 +1,8 @@
 import { format } from "winston";
 
-const isEmptyObject = (obj: Object) => !Object.keys(obj).length;
+const isEmptyObject = (
+  obj: Record<string | number | symbol, unknown>
+): boolean => !Object.keys(obj).length;
 
 export default format.printf(
   ({ label, level, message, timestamp, ...metadata }) => {

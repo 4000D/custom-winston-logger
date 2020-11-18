@@ -27,13 +27,14 @@ for (i = 0; i < len; i++) {
  * @param {string} namespace
  * @return {boolean} return true if a namespace is not filterred.
  */
-export default function filterNamespace(namespace: string) {
-  for (const r of exclude) {
-    if (r.test(namespace)) return false;
+export default function filterNamespace(namespace: string): boolean {
+  for (const i in exclude) {
+    if (exclude[i].test(namespace)) return false;
   }
 
-  if (include.length === 0) return true;
-  for (const r of include) {
-    if (r.test(namespace)) return true;
+  for (const i in include) {
+    if (include[i].test(namespace)) return true;
   }
+
+  return false;
 }
