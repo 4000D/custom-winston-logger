@@ -1,7 +1,7 @@
 {
   "name": "custom-winston-logger",
   "version": "0.0.1",
-  "description": "",
+  "description": "winston logger with custom features",
   "main": "./dist/index.js",
   "types": "./index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint:fix": "eslint src --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "4000D <dkdkajej@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.8.1",

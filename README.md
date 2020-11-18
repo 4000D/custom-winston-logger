@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-$ npm install https://github.com/4000D/custom-winston-logger.git
+$ npm install custom-winston-logger
 ```
 
 ## Usage
