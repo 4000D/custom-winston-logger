@@ -1,4 +1,9 @@
-# Custom WInstom Logger
+# Custom Winstom Logger
+
+Provided transports
+
+- console
+- daily-rotate-file (combined, error)
 
 ## Install
 
@@ -28,8 +33,8 @@ log.info('...')
 ```typescript
 export interface OptionsInterface {
   consoleColor: boolean; // whether use color in console log output or not
-  disableFile: boolean; // whether disable file log or nto
-  level: "debug" | "info"; // combined log default log level
+  disableFile: boolean; // whether disable file log or not
+  level: "debug" | "info"; // default log level for combined log
   errorLogFileName: string; // error log file name
   combinedLogFileName: string; // combined log file name
   dailyRotateFileOptions: {

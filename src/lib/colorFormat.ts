@@ -2,7 +2,7 @@ import { format } from "winston";
 import supportsColor from "supports-color";
 
 // https://github.com/visionmedia/debug/blob/3f56313c1e4a0d59c1054fb9b10026b6903bfba7/src/common.js#L41
-const cache: Record<string, number | string> = {}; // color cache
+const cache: Record<number | string, number | string> = {}; // color cache
 let colors: number[] = [6, 2, 3, 4, 5, 1];
 
 if (supportsColor && supportsColor.stderr.level >= 2) {
